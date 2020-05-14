@@ -11,11 +11,46 @@ namespace AgendaPersonala
         private Ora inceput;
         private Ora sfarsit;
         private string descriere;
-        private LinkedList<Persoana> participanti;
+        private List<Persoana> participanti;
 
         public Activitate(string denumire, Data data, Ora inceput, Ora sfarsit, string descriere)
         {
+            this.denumire = denumire;
+            this.data = data;
+            this.inceput = inceput;
+            this.sfarsit = sfarsit;
+            this.descriere = descriere;
+            participanti = new List<Persoana>();
+        }
 
+        public Data GetData()
+        {
+            return data;
+        }
+
+        public string getDescriere()
+        {
+            return descriere;
+        }
+
+        public void adaugarePersoana(Persoana pers)
+        {
+            participanti.Add(pers);
+        }
+
+        public string getDenumire()
+        {
+            return this.denumire;
+        }
+
+        public Ora getOraInceput()
+        {
+            return inceput;
+        }
+
+        public Ora getOraSfarsit()
+        {
+            return sfarsit;
         }
     }
 }
