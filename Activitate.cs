@@ -52,5 +52,10 @@ namespace AgendaPersonala
         {
             return sfarsit;
         }
+
+        public Data getData()
+        {
+            return data;
+        }
     }
 }

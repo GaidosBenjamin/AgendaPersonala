@@ -51,7 +51,7 @@ namespace AgendaPersonala
             List<Activitate> act = new List<Activitate>();
             foreach(Activitate a in activitati)
             {
-                if(a.getOraInceput() > inceput && a.getOraSfarsit() < sfarsit)
+                if(a.getOraInceput() > inceput && a.getOraSfarsit() < sfarsit && a.getData() == zi)
                 {
                     act.Add(a);
                 }

@@ -22,6 +22,35 @@ namespace AgendaPersonala
             return an + "/" + luna + "/" + zi;
         }
 
+        public static bool operator ==(Data x, Data y)
+        {
+            if (x.getAn() == y.getAn() && x.getLuna() == y.getLuna() && x.getZi() == y.getZi())
+                return true;
+            return false;
+        }
+
+        public static bool operator !=(Data x, Data y)
+        {
+            if (x.getAn() == y.getAn() && x.getLuna() == y.getLuna() && x.getZi() == y.getZi())
+                return false;
+            return true;
+        }
+
+        public int getAn()
+        {
+            return an;
+        }
+
+        public int getLuna()
+        {
+            return luna;
+        }
+
+        public int getZi()
+        {
+            return zi;
+        }
+
         public void setAn(int an)
         {
             this.an = an;
